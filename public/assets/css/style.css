@@ -1,0 +1,385 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fce9d8;
+}
+
+h1 {
+    margin: 30px;
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+h4{
+    text-align: center;
+    opacity: 0.8;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.custom-navbar {
+    background-color: #fce9d8 !important;
+}
+ /*Conteudo*/
+.conteudo{
+    margin-bottom: 20px;
+    width: 80%;
+    float: right;
+    box-sizing: border-box;
+}
+
+/*barra de filtro*/
+aside{
+    margin-bottom: 20px;
+    width: 15%;
+    height: 100%;
+    float: left;
+    padding: 30px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #fc9e00;
+}
+.filtro-container {
+    width: 110%;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f2c15f;
+    border-radius: 8px;
+  }
+  
+  .filtro-container label {
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  
+
+
+/*Imagem de destaque*/
+.destaque{
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/*Imagem destaque Estados*/
+.destaque-estados{
+    display: block;
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.texto {
+    position: absolute;
+    top: 85%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.15); /* Fundo escuro semi-transparente */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.conteiner .fita-destaque{
+    margin: auto; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto dentro das células */
+    
+}
+
+/*Faixa de destaque de cada estado*/
+.conteiner .fita-destaque .cor{
+    width: 60%;
+    height: 40px;
+    border-collapse: collapse;
+    background-color: #fc9e00;
+}
+.conteiner .fita-destaque .cor-para{
+    width: 60%;
+    height: 40px;
+    border-collapse: collapse;
+    background-color: #ffb777;
+}
+
+.conteiner .fita-destaque .cor-rio{
+    width: 60%;
+    height: 40px;
+    border-collapse: collapse;
+    background-color: lightblue;
+}
+
+.conteiner .fita-destaque .cor-tocantins{
+    width: 60%;
+    height: 40px;
+    border-collapse: collapse;
+    background-color: #99cbcc;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 30px;
+}
+
+/*Estados paragrafo*/
+.p-estados{
+    margin: 50px;
+    padding: 20px;
+    text-align: justify;
+ 
+}
+
+.img-estados{
+    display: inline-block;
+    width: 45%;
+    height: 200px; 
+    text-align: center;
+    margin-left: 50px;
+    object-fit: cover; 
+}
+/*Cards de imagens*/
+.card-estado{
+    display: inline-block;
+    width: calc(33% - 16px);
+    vertical-align: top;
+    margin: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card-estado img{
+    display: block;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/*Maps*/
+.mapa{
+    width: 50%;
+    height: 80px;
+    padding: 30px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color:#0c7b0e;
+    margin-bottom: 30px;
+}
+.mapa-sub{
+
+    width: 90%;
+    display: flex;
+    border-radius: 8px;
+    background-color: #4caa47;
+}
+
+.mapa .mapa-sub a{
+    color: white;
+}
+/*Login*/
+
+.login-wrapper {
+    margin-top: 100px;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    max-width: 90%;
+    overflow: hidden;
+}
+
+.login-image {
+    flex: 2;
+    background-image: url('/public/assets/img/serra-tocantins.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.login-container {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+}
+
+.login-container h1 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #6e8efb;
+    outline: none;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #7ed985, #91d6ae);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    margin-top: 10px;
+}
+
+.login-button a{
+    color: white;
+}
+
+.login-button:hover {
+    opacity: 0.9;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 20px;
+    color: #0b8515;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.signup-link {
+    margin-top: 30px;
+    color: #666;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #0da32e;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+/*login
+@media (max-width: 768px) {
+    .login-wrapper {
+        flex-direction: column;
+    }
+    
+    .login-image {
+        height: 200px;
+    }
+}
+*/
+
+@media screen and (max-width: 768px){
+    /*Cabeçalho*/
+    header{
+        background-color: #0b8515;
+        background-size: 25vw 15vh; /* altera altura e largura da img*/;
+    }
+    /*Barra Lateral*/
+    aside{
+        width: 100%;
+        height: 20px;
+        box-sizing: border-box
+    }
+    .filtro-container{
+        width: 100%;
+        display: flex;
+        box-sizing: border-box
+    }
+    /*Cards estados*/
+    .conteudo{
+        width: 100%;
+        margin-bottom: 20px;
+        box-sizing: border-box
+    }
+    .card-estado{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+    .card-estado img{
+      width: 500px;
+      height: 300px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px){
+    header{
+        background-color:#fc9e00;
+        background-size: 10vw 15vh; /* altera altura e largura da img*/;
+    }
+    /*Barra Lateral*/
+    aside{
+        width: 100%;
+        height: 20px;
+        box-sizing: border-box
+    }
+    .filtro-container{
+        width: 100%;
+        display: flex;
+        box-sizing: border-box
+    }
+
+    /*Cards estados*/
+    .conteudo{
+        width: 100%;
+    }
+    .card-estado{
+       display: inline-flex;
+       gap: 30px;
+       flex-wrap: wrap;
+       justify-content: space-between;
+       align-items: center;
+        
+    }
+    .card-estado img{
+      width: 400px;
+      height: 300px;
+      box-sizing: border-box;
+    }
+    
+}

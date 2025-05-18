@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Turístico</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/d6c7563bb2.js" crossorigin="anonymous"></script>
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+   
+
+</head>
+<body>
+    <!--Cabeçalho-->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Guia Turístico</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                    <li><a href="login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <img class="destaque" src="assets/img/arara-destaque.jpg" alt="Arara Azul">
+        <h1>Turismo a todo vapor</h1>
+         <!--Barra lateral-->
+    <aside>
+        
+        <section class="filtro-container">
+            <h3>Filtros - Regiões</h3><br>
+            <input type="checkbox" name="filtro" value="norte" checked>
+            <label for="norte"> Norte</label><br>
+            <input type="checkbox"  name="filtro" value="sul" checked>
+            <label for="sul"> Sul</label><br>
+            <input type="checkbox" name="filtro" value="sudeste" checked>
+            <label for="sudeste"> Sudeste</label><br>
+            <input type="checkbox" name="filtro" value="leste" checked>
+            <label for="leste"> Leste</label><br>
+            <input type="checkbox" name="filtro" value="oeste" checked>
+            <label for="oeste"> Oeste</label><br>
+            
+        </section>
+    </aside>
+    <!--Conteúdo-->
+    <main class="conteudo">
+  
+        <!--Cards-->
+        <section id="card">
+            
+                <div class="card-estado" data-categoria="norte">
+                    <div>
+                        <h2>Pará</h2>
+                        <a href="pg-para.html"><img src="assets/img/para.webp" alt="Mercado Ver-o-Peso" title="Mercado Ver-o-Peso"></a>
+                        <button type="button" class="btn btn-success btn-lg btn-block" id="btnCard1">Saiba mais</button>
+                    </div>
+                
+                </div>
+                <div class="card-estado" data-categoria="sudeste">
+                    <div>
+                        <h2>Rio de Janeiro</h2>
+                        <a href="pg-rio.html"><img src="assets/img/rio-janeiro.jpg" alt="Cristo Redentor" title="Cristo Redentor"></a>
+                        <button type="button" class="btn btn-success btn-lg btn-block" id="btnCard2">Saiba mais</button>
+                    </div>
+                </div>
+                <div class="card-estado" data-categoria="norte">
+                    <div>
+                        <h2>Tocantins</h2>
+                        <a href="pg-tocantins.html"><img src="assets/img/tocantins.jpg" alt="Parque estadual do Jalapão" title="Parque estadual do Jalapão"></a>
+                        <button type="button" class="btn btn-success btn-lg btn-block" id="btnCard3">Saiba mais</button>
+                    </div>
+                </div>            
+        </section>
+    </main>
+
+    <script src="assets/scripts/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // carregar os dados
+        document.getElementById('btnCard1').addEventListener('click', carregaDados)
+        document.getElementById('btnCard2').addEventListener('click', carregaDados)
+        document.getElementById('btnCard3').addEventListener('click', carregaDados)
+        function carregaDados(){
+            let btnCard = document.getElementById('card')
+            strTextoHTML = ''
+
+            for(let i = 0; i < dados.length; i++){
+                let dado = dados[i]
+                strTextoHTML += `<div class="card-estado">
+                    <button class="btn btn-success btn-lg btn-block"><a class="text-white text-decoration-none" href="detalhes.html?id=${dado.id}">${dado.nome}</a></button>
+                    <img src="${dado.imagem}">
+                    </div>` 
+            }
+            btnCard.innerHTML = strTextoHTML
+        }
+    </script>
+</body>
+</html>
