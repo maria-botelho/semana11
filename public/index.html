@@ -4,113 +4,208 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia Turístico</title>
+
+    <!--CSS da aplicação-->
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://kit.fontawesome.com/d6c7563bb2.js" crossorigin="anonymous"></script>
 
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
-   
-
 </head>
 <body>
     <!--Cabeçalho-->
-    <nav class="navbar navbar-expand-lg custom-navbar">
+    <header>
+        <!--Cabeçalho-->
+    <!-- HEADER COMEÇO -->
+    <header id="header" class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Guia Turístico</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <a href="#" class="navbar-brand me-0" id="logo">
+                <img class="img-logo" id="img-logo" src="assets/img/logo.png" alt="Guia turístico"
+                    width="150" height="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
-                    </li>
-                    <li><a href="login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i></i></a></li>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul id="navbar" class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#chefs" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="#cardapio" class="nav-link">Contatos</a></li>
+                    <li class="nav-item"><a href="#sobre" class="nav-link">Sobre nós</a></li>
                 </ul>
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-primary">Login</a>
+                </div>
             </div>
         </div>
-    </nav>
-        <img class="destaque" src="assets/img/arara-destaque.jpg" alt="Arara Azul">
-        <h1>Turismo a todo vapor</h1>
-         <!--Barra lateral-->
-    <aside>
-        
-        <section class="filtro-container">
-            <h3>Filtros - Regiões</h3><br>
-            <input type="checkbox" name="filtro" value="norte" checked>
-            <label for="norte"> Norte</label><br>
-            <input type="checkbox"  name="filtro" value="sul" checked>
-            <label for="sul"> Sul</label><br>
-            <input type="checkbox" name="filtro" value="sudeste" checked>
-            <label for="sudeste"> Sudeste</label><br>
-            <input type="checkbox" name="filtro" value="leste" checked>
-            <label for="leste"> Leste</label><br>
-            <input type="checkbox" name="filtro" value="oeste" checked>
-            <label for="oeste"> Oeste</label><br>
-            
-        </section>
-    </aside>
-    <!--Conteúdo-->
-    <main class="conteudo">
+    </header>
+    <!-- HEADER FIM -->
+    
+    <main>
+      <!--Carrossel-->
+       <div class="content-slide">
+            <div class="slides">
   
-        <!--Cards-->
-        <section id="card">
+              <input type="radio" class="input" name="slide" id="slide1" checked>
+              <input type="radio" class="input" name="slide" id="slide2">
+              <input type="radio" class="input" name="slide" id="slide3">
+              <input type="radio" class="input" name="slide" id="slide4">
+              <input type="radio" class="input" name="slide" id="slide5">
+
+              <div class="slide s1">
+                <img src="assets/img/arara-destaque.jpg" alt="">
+              </div>
+  
+              <div class="slide">
+                <img src="assets/img/cristo-rio.jpg" alt="">
+              </div>
+  
+              <div class="slide">
+                <img src="assets/img/agua-tocantins.jpg" alt="">
+              </div>
+  
+              <div class="slide">
+                <img src="assets/img/escadaria-rio.webp" alt="">
+              </div>
+  
+              <div class="slide">
+                <img src="assets/img/mangal-para.webp" alt="">
+              </div>
+  
+            </div>
+          </div>
+
+          <div class="navigation">
+            <label class="bar" for="slide1"></label>
+            <label class="bar" for="slide2"></label>
+            <label class="bar" for="slide3"></label>
+            <label class="bar" for="slide4"></label>
+            <label class="bar" for="slide5"></label>
+          </div>
+       
+       <!--Cards-->
+    <div class="py-5">
+      <aside>
+      
+          <section class="filtro-container">
+              <h3>Filtros - Regiões</h3><br>
+              <input type="checkbox" name="filtro" value="norte" checked>
+              <label for="norte"> Norte</label><br>
+              <input type="checkbox"  name="filtro" value="sul" checked disabled>
+              <label for="sul"> Sul</label><br>
+              <input type="checkbox" name="filtro" value="sudeste" checked>
+              <label for="sudeste"> Sudeste</label><br>
+              <input type="checkbox" name="filtro" value="leste" checked disabled>
+              <label for="leste"> Leste</label><br>
+              <input type="checkbox" name="filtro" value="oeste" checked disabled>
+              <label for="oeste"> Oeste</label><br>
+      
+          </section>
+      </aside>
+    </div>
+    <!--Conteúdo-->
+
+      <div class="conteudo">
+        
+          <!--Cards-->
+          <section id="card">
+        
+                  <div class="card-estado" data-categoria="norte" id="destino-1">
+                      <div>
+                          <h2>Pará</h2>
+                          <img src="assets/img/para.webp" alt="Mercado Ver-o-Peso" title="Mercado Ver-o-Peso">
+                          <button type="button" class="btn btn-success btn-lg btn-block" id="btnCard1">Saiba mais</button>
+                      </div>
+        
+                  </div>
+                  <div class="card-estado" data-categoria="sudeste" id="destino-2">
+                      <div>
+                          <h2>Rio de Janeiro</h2>
+                          <img src="assets/img/rio-janeiro.jpg" alt="Cristo Redentor" title="Cristo Redentor">
+                          <button type="button" class="btn btn-success btn-lg btn-block" id="btnCard2">Saiba mais</button>
+                      </div>
+                  </div>
+                  <div class="card-estado" data-categoria="norte" id="destino-3">
+                      <div>
+                          <h2>Tocantins</h2>
+                          <img src="assets/img/tocantins.jpg" alt="Parque estadual do Jalapão" title="Parque estadual do Jalapão">
+                          <button type="button" class="btn btn-success btn-lg btn-block" id="btnCard3">Saiba mais</button>
+                      </div>
+                  </div>
+          </section>
+      </div>
+
+        <!--Rodape-->
+        <footer class="footer-aluno">
             
-                <div class="card-estado" data-categoria="norte">
-                    <div>
-                        <h2>Pará</h2>
-                        <a href="pg-para.html"><img src="assets/img/para.webp" alt="Mercado Ver-o-Peso" title="Mercado Ver-o-Peso"></a>
-                        <button type="button" class="btn btn-success btn-lg btn-block" id="btnCard1">Saiba mais</button>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <div class="title">
+                        <h2><strong>Sobre</strong>  </h2>
+                        <p>
+                            Este projeto tem como objetivo criar um guia turístico moderno e acessível, reunindo informações claras e atrativas sobre os principais destinos, pontos turísticos, curiosidades culturais e dicas locais. A proposta é facilitar a experiência de viagem, conectando turistas a fotos, mapas e recomendações atualizadas, tudo em um formato digital e interativo. Com foco em acessibilidade e praticidade, o guia será uma ponte entre visitantes e os encantos de cada destino!
+                        </p>
                     </div>
-                
+                    
                 </div>
-                <div class="card-estado" data-categoria="sudeste">
-                    <div>
-                        <h2>Rio de Janeiro</h2>
-                        <a href="pg-rio.html"><img src="assets/img/rio-janeiro.jpg" alt="Cristo Redentor" title="Cristo Redentor"></a>
-                        <button type="button" class="btn btn-success btn-lg btn-block" id="btnCard2">Saiba mais</button>
+            
+                <div class="footer-section">
+                    <div class="title">
+                        <h2><strong>Autoria</strong>  </h2>
                     </div>
+                    <ul class="aluno-info">
+                        <li><strong>Nome:</strong> Maria Eduarda Botelho</li>
+                        <li><strong>RA:</strong>  887245</li>
+                        <li><strong>Curso:</strong>  Analise de Desenvolvimento de Sistemas</li>
+                        <li><strong>Turma:</strong>  Noite</li>
+                    </ul>
                 </div>
-                <div class="card-estado" data-categoria="norte">
-                    <div>
-                        <h2>Tocantins</h2>
-                        <a href="pg-tocantins.html"><img src="assets/img/tocantins.jpg" alt="Parque estadual do Jalapão" title="Parque estadual do Jalapão"></a>
-                        <button type="button" class="btn btn-success btn-lg btn-block" id="btnCard3">Saiba mais</button>
-                    </div>
-                </div>            
-        </section>
+            </div>
+        </footer>
     </main>
 
-    <script src="assets/scripts/app.js"></script>
+    <script src="assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // carregar os dados
-        document.getElementById('btnCard1').addEventListener('click', carregaDados)
-        document.getElementById('btnCard2').addEventListener('click', carregaDados)
-        document.getElementById('btnCard3').addEventListener('click', carregaDados)
-        function carregaDados(){
-            let btnCard = document.getElementById('card')
-            strTextoHTML = ''
+      // Filtro de cards
+        const checkboxes = document.querySelectorAll('input[name="filtro"]');
+          
+        // Adiciona evento de change a cada checkbox
+        checkboxes.forEach(checkbox => {
+          checkbox.addEventListener('change', filtrarCards);
+        });
 
-            for(let i = 0; i < dados.length; i++){
-                let dado = dados[i]
-                strTextoHTML += `<div class="card-estado">
-                    <button class="btn btn-success btn-lg btn-block"><a class="text-white text-decoration-none" href="detalhes.html?id=${dado.id}">${dado.nome}</a></button>
-                    <img src="${dado.imagem}">
-                    </div>` 
-            }
-            btnCard.innerHTML = strTextoHTML
+        // Função de filtragem
+        function filtrarCards() {
+          // Pega os valores dos checkboxes marcados
+          const filtrosAtivos = Array.from(document.querySelectorAll('input[name="filtro"]:checked'))
+                                    .map(checkbox => checkbox.value);
+          
+          // Seleciona todos os cards
+          const cards = document.querySelectorAll('.card-estado');
+          
+          // Itera sobre cada card
+          cards.forEach(card => {
+            // Pega a categoria do card (do atributo data-categoria)
+            const categoriaCard = card.getAttribute('data-categoria');
+            
+            // Verifica se a categoria do card está nos filtros ativos
+            const deveMostrar = filtrosAtivos.includes(categoriaCard);
+            
+            // Mostra ou esconde o card baseado na verificação
+            card.style.display = deveMostrar ? 'inline-block' : 'none';
+          });
         }
-    </script>
+        //fim filtro de cards
+        document.querySelectorAll("div[id^='destino-']").forEach(img => {
+          img.addEventListener('click', () => {
+            const id = img.id.split('-')[1];
+            window.location.href = `detalhes.html?id=${id}`;
+          });
+        });
+
+      </script>
 </body>
 </html>

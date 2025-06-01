@@ -1,13 +1,25 @@
 *{
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
-    border: 0;
+    box-sizing: border-box;
+    
+}
+:root {
+    --main-color: #fff8e1;
+    --text-color: #171718;
+    --text-color2: #fafafa;
+    --cp-color: #a41414;
+    --cs-color: #fc9e00;
+    --detalhes-bg: #6b4423;
+    --detalhes-bg2: #8d6e63;
+    --destaques-bg: #d4af37;
+    --transition: all 0.4s ease;
 }
 
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #fce9d8;
+    background-color: #f9f2ec !important;
 }
 
 h1 {
@@ -24,9 +36,65 @@ h4{
     font-style: italic;
 }
 
-.custom-navbar {
-    background-color: #fce9d8 !important;
+/* HEADER COMEÇO */
+#header {
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    transition: var(--transition);
+    background: rgba(23, 23, 24, 0.274);
+    box-shadow: 1px 4px 0.2em rgba(23, 23, 24, 0.35);
+    padding: 10px 0;
 }
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.021);
+    padding: 0.5rem;
+    color: white;
+}
+
+.navbar-toggler-icon {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2rem;
+}
+
+#navbar .nav-link {
+    font-size: 1rem;
+    font-weight: 650;
+    color: white;
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+
+#navbar .nav-link::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: var(--cs-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: var(--transition);
+}
+
+#navbar .nav-link:hover::after,
+#navbar .nav-link.active::after {
+    width: 100%;
+}
+
+#logo {
+    padding: 0 10px;
+}
+/* HEADER FIM */
+
  /*Conteudo*/
 .conteudo{
     margin-bottom: 20px;
@@ -59,78 +127,160 @@ aside{
     cursor: pointer;
   }
   
+/*slide*/
+.content-slide{
+    height: 700px;
+    width: 100%;
+    overflow: hidden;
+    
+}
 
+.navigation{
+    position: absolute;
+    bottom: 160px;
+    left: 850px;
+    top: 92%;
+    left: 45%;
+    display: flex;
+}
 
-/*Imagem de destaque*/
-.destaque{
+.bar{
+    width: 20px;
+    height: 15px;
+    border: 3px solid white;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.75);
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: .0.3s;
+}
+.bar:hover{
+    background-color: white;
+}
+.input{
+    display: none;
+}
+input{
+    cursor: pointer;
+}
+
+.slides{
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+.slide {
+    width: 20%; /* Corrigido para dividir igualmente os 5 slides */
+    transition: .6s;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Preenche sem distorcer */
+    display: block;
+}
+
+#slide1:checked ~ .s1{
+    margin-left: 0;
+}
+#slide2:checked ~ .s1{
+    margin-left: -20%;
+}
+#slide3:checked ~ .s1{
+    margin-left: -40%;
+}
+#slide4:checked ~ .s1{
+    margin-left: -60%;
+}
+#slide5:checked ~ .s1{
+    margin-left: -80%;
+}
+/*fim slide*/
+/*Cards de imagens*/
+.card-estado{
+    display: inline-block;
+    width: calc(33% - 16px);
+    vertical-align: top;
+    margin: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card-estado img{
     display: block;
     width: 100%;
-    height: 400px;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 10px;
     object-fit: cover;
 }
+/*fim card*/
+
+/* Footer */
+.footer-aluno {
+    background-color: #f9f2ec;
+    clear: both;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 5px;
+}
+
+.footer-section h3 {
+    border-bottom: 2px solid #f9f2ec;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.aluno-info li {
+    margin-bottom: 8px;
+    list-style-type: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #f9f2ec;
+    margin-top: 20px;
+}
+/*fim footer*/
 
 /*Imagem destaque Estados*/
 .destaque-estados{
     display: block;
     width: 100%;
-    height: 650px;
+    height: 700px;
     object-fit: cover;
-}
-
-.container {
-    position: relative;
-    display: inline-block;
-    text-align: center;
 }
 .texto {
     position: absolute;
-    top: 85%;
+    top: 90%;
     left: 95%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 24px;
     font-weight: bold;
-    background: rgba(0, 0, 0, 0.15); /* Fundo escuro semi-transparente */
+    background: rgba(0, 0, 0, 0.25); /* Fundo escuro semi-transparente */
     padding: 10px 20px;
     border-radius: 5px;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
 }
-.conteiner .fita-destaque{
-    margin: auto; /* Centraliza horizontalmente */
-    text-align: center; /* Centraliza o texto dentro das células */
-    
-}
 
-/*Faixa de destaque de cada estado*/
-.conteiner .fita-destaque .cor{
-    width: 60%;
-    height: 40px;
-    border-collapse: collapse;
-    background-color: #fc9e00;
-}
-.conteiner .fita-destaque .cor-para{
-    width: 60%;
-    height: 40px;
-    border-collapse: collapse;
-    background-color: #ffb777;
-}
-
-.conteiner .fita-destaque .cor-rio{
-    width: 60%;
-    height: 40px;
-    border-collapse: collapse;
-    background-color: lightblue;
-}
-
-.conteiner .fita-destaque .cor-tocantins{
-    width: 60%;
-    height: 40px;
-    border-collapse: collapse;
-    background-color: #99cbcc;
-}
-
-a{
+td a{
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -153,50 +303,12 @@ a{
     margin-left: 50px;
     object-fit: cover; 
 }
-/*Cards de imagens*/
-.card-estado{
-    display: inline-block;
-    width: calc(33% - 16px);
-    vertical-align: top;
-    margin: 8px;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.card-estado img{
-    display: block;
-    width: 100%;
-    height: 200px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-/*Maps*/
-.mapa{
-    width: 50%;
-    height: 80px;
-    padding: 30px;
-    border-radius: 8px;
-    box-sizing: border-box;
-    background-color:#0c7b0e;
-    margin-bottom: 30px;
-}
-.mapa-sub{
-
-    width: 90%;
-    display: flex;
-    border-radius: 8px;
-    background-color: #4caa47;
-}
-
-.mapa .mapa-sub a{
-    color: white;
-}
+/*fim estados*/
 /*Login*/
 
 .login-wrapper {
-    margin-top: 100px;
+     margin: 100px auto 0 auto; /* topo 100px, laterais automáticas para centralizar horizontalmente */
+    display: flex;
     display: flex;
     background-color: white;
     border-radius: 10px;
@@ -208,7 +320,7 @@ a{
 
 .login-image {
     flex: 2;
-    background-image: url('/public/assets/img/serra-tocantins.jpg');
+    background-image: url('/maria_botelho_1493360/assets/img/login.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -267,6 +379,7 @@ a{
 
 .login-button a{
     color: white;
+    text-decoration: none;
 }
 
 .login-button:hover {
@@ -299,18 +412,6 @@ a{
 .signup-link a:hover {
     text-decoration: underline;
 }
-/*login
-@media (max-width: 768px) {
-    .login-wrapper {
-        flex-direction: column;
-    }
-    
-    .login-image {
-        height: 200px;
-    }
-}
-*/
-
 @media screen and (max-width: 768px){
     /*Cabeçalho*/
     header{
@@ -344,6 +445,13 @@ a{
     .card-estado img{
       width: 500px;
       height: 300px;
+    }
+    .footer-container {
+        flex-direction: column;
+    }
+    
+    .footer-section {
+        margin-bottom: 20px;
     }
 }
 
