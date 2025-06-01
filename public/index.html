@@ -137,6 +137,7 @@
           </section>
       </div>
 
+
         <!--Rodape-->
         <footer class="footer-aluno">
             
@@ -206,6 +207,32 @@
           });
         });
 
+        /*SLIDE*/
+         let contadorSlide = 1;
+          const totalSlides = 5;
+
+          setInterval(function() {
+            document.getElementById('slide' + contadorSlide).checked = true;
+            contadorSlide++;
+            if (contadorSlide > totalSlides) {
+              contadorSlide = 1;
+            }
+          }, 4000); 
+
+        /*LOGIN*/
+           window.onload = () => {
+        const usuario = JSON.parse(localStorage.getItem('usuario'))
+
+        if (usuario) {
+            document.getElementById('loginMessage').innerText = `Login: ${usuario.nome}`
+        }
+
+        const btnLogout = document.getElementById('logoutBtn')
+        btnLogout.addEventListener('click', () => {
+            localStorage.removeItem('usuario')
+            window.location.reload()
+        })
+    }
       </script>
 </body>
 </html>

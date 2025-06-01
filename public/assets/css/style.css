@@ -320,7 +320,7 @@ td a{
 
 .login-image {
     flex: 2;
-    background-image: url('/maria_botelho_1493360/assets/img/login.jpg');
+    background-image: url('../img/login.jpg');
     background-size: cover;
     background-position: center;
 }
