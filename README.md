@@ -6,14 +6,14 @@ Nessa etapa, vamos evoluir o projeto anterior e contemplar um ambiente de desenv
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome:Maria Eduarda Botelho
+- Matricula: 887245
+- Proposta de projeto escolhida:Guia turistico
+- Breve descrição sobre seu projeto:Um site para conhecer e visitar os estados do Brasil
 
 **Print do teste da API com visualização do JSON**
 
-<<  COLOQUE A IMAGEM AQUI >>
+![Print estrutura de dados](/public/assets/img/estrutura_dados.png)
 
 **Print da aba NETWORK com requisições Fetch/XHR**
 
